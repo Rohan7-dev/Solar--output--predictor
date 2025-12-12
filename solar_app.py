@@ -57,7 +57,7 @@ with col2:
 if st.button("Run Full Analysis", use_container_width=True):
     
     # 🔐 API KEY SECTION
-    api_key = st.secrets["openweather_key"]
+    api_key = st.secrets["OPENWEATHER_KEY"]
     
     url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}"
 
@@ -164,4 +164,5 @@ if st.button("Run Full Analysis", use_container_width=True):
             st.error("❌ City not found! Please check spelling.")
 
     except Exception as e:
+
         st.error(f"❌ Connection Error: {e}")
